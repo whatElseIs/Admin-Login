@@ -1,0 +1,114 @@
+<!-- This is the HTML file for the Responsive Admin Dashboard. -->
+<!-- It contains the structure and layout of the dashboard. -->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Admin Dashboard </title>
+        <link rel="stylesheet" href="style.css">
+        <script defer src="/js/auth.js"></script>
+        <script defer src="/init.js"></script>
+        <!-- Boxicons CDN Link -->
+        <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     </head>
+<body>
+    <!-- Sidebar -->
+    <div class="sideBar">
+        <div class="logo-details">
+            <!-- logo icon here -->
+            
+            <span class="logo_name">WE CARE</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="#" class="active">
+                    <i class='bx bx-grid-alt' ></i>
+                    <span class="links_name">Dashboard</span>
+                </a>
+            </li>
+            <!-- Other navigation links if any-->
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <section class="home-section">
+        <nav>
+            <!-- Sidebar toggle button -->
+            <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">Dashboard</span>
+            </div>
+            <!-- Search box -->
+            <div class="searchBox">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search' ></i>
+            </div>
+            <!-- User profile details -->
+            <div class="profile-details">
+                <img src="images/profile.jpg" alt="">
+                <span class="admin_name">ADMIN NAME</span>
+                <i class='bx bx-chevron-down' ></i>
+            </div>
+        </nav>
+
+        <!-- Home Content -->
+        <div class="home-content">
+            <!-- Overview boxes -->
+            <div class="overview-boxes">
+                <!-- Total Order box -->
+                <div class="box">
+                    <div class="right-side">
+                        <div class="box-topic">Total Users</div>
+                        <div class="number">40,876</div>
+                        <div class="indicator">
+                            <i class='bx bx-up-arrow-alt'></i>
+                            <span class="text">Up from yesterday</span>
+                        </div>
+                    </div>
+                    <i class='bx bxs-user-plus'></i>
+                </div>
+                <!-- Other overview boxes -->
+            </div>
+
+            <!-- Sales boxes -->
+            <div class="recentBoxes">
+                <!-- Recent Sales box -->
+                <div class="recentAct box">
+                    <div class="title">Recent Activities</div>
+                    <div class="data-details">
+                        <!-- Sales details -->
+                    </div>
+                    <div class="button">
+                        <a href="#">See All</a>
+                    </div>
+                </div>
+                <!-- Top Selling Product box -->
+                <div class="top-data box">
+                    <div class="title">Other possible data...</div>
+                    <ul class="top-data-details">
+                        <!-- Top selling product details -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript code -->
+    <script>
+        // Toggle sidebar function
+        let sidebar = document.querySelector(".sideBar");
+        let sidebarBtn = document.querySelector(".sidebarBtn");
+        sidebarBtn.onclick = function() {
+            sidebar.classList.toggle("active");
+            if(sidebar.classList.contains("active")){
+                sidebarBtn.classList.replace("bx-menu" ,"bx-menu-alt-right");
+            } else {
+                sidebarBtn.classList.replace("bx-menu-alt-right", "bx-menu");
+            }
+        }
+    </script>
+
+</body>
+</html>
